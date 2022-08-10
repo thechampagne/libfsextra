@@ -2,17 +2,18 @@
 #define __FS_EXTRA_H__
 
 #include <stdint.h>
+#include <stddef.h>
 
 #ifdef __cplusplus
 extern "C" {
 #endif
 
 typedef struct {
-    char* overwrite;
-    char* skip_exist;
+    int overwrite;
+    int skip_exist;
     size_t buffer_size;
-    char* copy_inside;
-    char* content_only;
+    int copy_inside;
+    int content_only;
     uint64_t depth;
 } copy_options_t;
 
